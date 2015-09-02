@@ -2,14 +2,15 @@ class PigLatinize
 
 # if begins with vowel add 'ay' to end of word
   def self.vowel word
-    if (word.select { |word| word.start_with? ('a' 'e' 'i' 'o' 'u') })
-      word + 'ay'
+    vowel = word.start_with? "a", "e", "i", "o", "u"
+    
+    if vowel 
+        word + 'ay'
+    else
+      constanant = word[0] +  'ay'
+      cons = (word + constanant)
+      cons.slice(1..cons.length)
     end
-    # case vowel
-      
-
 
   end
-
-
 end
